@@ -5,6 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Store from './Store';
 
+export interface IProps {
+  Store: Store
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App Store={Store} />
