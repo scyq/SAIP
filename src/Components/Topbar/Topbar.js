@@ -1,4 +1,4 @@
-import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import React from 'react';
 import './Topbar.css';
 

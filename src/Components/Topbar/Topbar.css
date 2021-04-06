@@ -6,4 +6,5 @@
 
 .title {
     flex: 1; 
+    font-weight: bold !important;
 }

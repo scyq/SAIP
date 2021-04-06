@@ -10,6 +10,7 @@ import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import ColorLensIcon from '@material-ui/icons/ColorLens';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
 import './Navibar.css';
+import { inject, observer } from 'mobx-react';
 
 /* Icon的样式 */
 const useColorlibStepIconStyles = makeStyles({
@@ -61,7 +62,7 @@ const ColorlibConnector = withStyles({
 })(StepConnector);
 
 /* Stepper 每一步的Icon 在这里修改 */
-function ColorlibStepIcon(props: any) {
+function ColorlibStepIcon(props) {
     const classes = useColorlibStepIconStyles();
     const { active, completed } = props;
 
@@ -84,11 +85,18 @@ function ColorlibStepIcon(props: any) {
     );
 }
 
-export default function Navibar(props: any) {
-    return (
-        <div className="root" >
-            <Stepper alternativeLabel activeStep={props.activeStep} connector={<ColorlibConnector></ColorlibConnector>}>
-                {steps.map((label) => (
+@inject("Store")
+@observer
+class Navibar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.store = props.Store;
+    }
+
+    render() {
+        return (
+            <Stepper className="root" alternativeLabel connector={<ColorlibConnector></ColorlibConnector>}>
+                {this.store.steps.map((label) => (
                     <Step key={label}>
                         <StepLabel StepIconComponent={ColorlibStepIcon}>
                             {label}
@@ -96,6 +104,8 @@ export default function Navibar(props: any) {
                     </Step>
                 ))}
             </Stepper>
-        </div>
-    )
+        );
+    }
 }
+
+export default Navibar;

@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './Pages/Index/App';
 import reportWebVitals from './reportWebVitals';
-import Store from './Store';
-
-export interface IProps {
-  Store: Store
-}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App Store={Store} />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
