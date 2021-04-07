@@ -17,12 +17,12 @@ class SearchPanel extends React.Component {
                         <img
                             src={saip}
                             className="logo"
-                            alt="SIPAG"
+                            alt="SAIP"
                         >
                         </img>
                         <form noValidate>
                             <TextField
-                                value={() => { }}
+                                value={''}
                                 variant="outlined"
                                 margin="normal"
                                 required
@@ -42,14 +42,55 @@ class SearchPanel extends React.Component {
                                 className="arrow"
                             >
                             </img>
-                            <span className="input-hint">
-                                请输入您软件的应用场景
+                            <span style={{ fontSize: "30px", fontWeight: "bold" }}>
+                                Please enter your application scenario.
                             </span>
                         </span>
                     </div>
                 );
+            case 1:
+                return (
+                    <div className="flex-col-center">
+                        <img
+                            src={saip}
+                            className="logo"
+                            alt="SAIP"
+                        >
+                        </img>
+                        <form noValidate>
+                            <TextField
+                                value={''}
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="colorInput"
+                                label='试试输入 "我喜欢活泼生动的画风"'
+                                name="colorInput"
+                                autoComplete="colorInput"
+                                autoFocus
+                                onChange={() => { }}
+                            />
+                        </form>
+                        <span>
+                            <img
+                                src={arrow}
+                                alt="null"
+                                className="arrow"
+                            >
+                            </img>
+
+                            <span style={{ fontSize: "30px", fontWeight: "bold" }}>
+                                Please enter the styles you want.
+                        </span>
+                        </span>
+
+                    </div>
+                );
+            case 2:
+                return <div></div>;
             default:
-                return <div></div>
+                return <div></div>;
         }
     };
 }
