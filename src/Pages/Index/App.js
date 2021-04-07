@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
 import Topbar from '../../Components/Topbar/Topbar';
-import Store from '../../Store';
 import Navibar from '../../Components/Navibar/Navibar';
-import { Provider } from 'mobx-react';
+import { observer, Provider } from 'mobx-react';
+import StepController from '../../Components/StepController/StepController';
 
+@observer
 class App extends React.Component {
   render() {
     return (
-      <Provider Store={new Store()}>
+      <Provider {...this.props}>
         <div className="App">
           <Topbar></Topbar>
           <Navibar></Navibar>
+          <StepController></StepController>
         </div>
       </Provider>
     );
