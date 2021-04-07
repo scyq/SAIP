@@ -42,12 +42,12 @@ class StepController extends React.Component {
             return (
                 <div className="buttonPos">
                     <Button
-                        onClick={store.resetActiveStep}
+                        onClick={() => store.resetActiveStep()}
                         className="button"
                         size="large"
                         startIcon={<ReplayIcon />}
                     >
-                        重新选择
+                        Restart
                     </Button>
                     <Button
                         variant="contained"
@@ -57,7 +57,7 @@ class StepController extends React.Component {
                         size="large"
                         endIcon={<PlayArrowIcon />}
                     >
-                        查看效果
+                        Show
                     </Button>
                 </div>
             );

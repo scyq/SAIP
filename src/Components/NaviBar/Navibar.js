@@ -88,19 +88,19 @@ function ColorlibStepIcon(props) {
 @inject("store")
 @observer
 class Navibar extends React.Component {
+
     render() {
         const { store } = this.props;
         return (
-            // <Stepper className="root" activeStep={store.activeStep} alternativeLabel connector={<ColorlibConnector></ColorlibConnector>}>
-            //     {store.steps.map((label) => (
-            //         <Step key={label}>
-            //             <StepLabel StepIconComponent={ColorlibStepIcon}>
-            //                 {label}
-            //             </StepLabel>
-            //         </Step>
-            //     ))}
-            // </Stepper>
-            <div>{store.activeStep}</div>
+            <Stepper className="root" activeStep={store.activeStep} alternativeLabel connector={<ColorlibConnector></ColorlibConnector>}>
+                {store.steps.map((label) => (
+                    <Step key={label}>
+                        <StepLabel StepIconComponent={ColorlibStepIcon}>
+                            {label}
+                        </StepLabel>
+                    </Step>
+                ))}
+            </Stepper>
         );
     }
 }

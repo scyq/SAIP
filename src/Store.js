@@ -1,6 +1,10 @@
-import { action, observable } from "mobx";
+import { action, makeObservable, observable } from "mobx";
 
 class Store {
+
+    constructor() {
+        makeObservable(this);
+    }
 
     @observable activeStep = 0;
     @observable steps = ['Application scenario', 'Styles', 'Recommendation', 'Modification'];
