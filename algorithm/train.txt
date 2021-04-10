@@ -1,45 +1,159 @@
+1
 __label__holy-grail twitter
+__label__holy-grail yahoo
+__label__holy-grail wikipedia
+__label__holy-grail qq
+__label__holy-grail outlook
+__label__holy-grail taobao
+__label__holy-grail weibo
+__label__holy-grail hao123
+__label__holy-grail blogger
+__label__holy-grail github
 
-__label__sandwich
+2
+__label__sandwich google
+__label__sandwich youtube
+__label__sandwich baidu
+__label__sandwich qq
+__label__sandwich msn
+__label__sandwich sina
+__label__sandwich blogger
+__label__sandwich tumblr
+__label__sandwich gmw
+__label__sandwich microsoft
+__label__sandwich paypal
+__label__sandwich pornhub
+__label__sandwich whatsapp
 
-__label__banner-sidebar-left google
-__label__banner-sidebar-left
-__label__banner-sidebar-left
+3
+__label__banner-sidebar-left yahoo
+__label__banner-sidebar-left wikipedia
+__label__banner-sidebar-left outlook
+__label__banner-sidebar-left aliexpress
+__label__banner-sidebar-left pornhub
+__label__banner-sidebar-left fc2
 
-__label__banner-sidebar-right
+4
+__label__banner-sidebar-right google
+__label__banner-sidebar-right youtube
+__label__banner-sidebar-right facebook
+__label__banner-sidebar-right baidu
+__label__banner-sidebar-right qq
+__label__banner-sidebar-right tumblr
+__label__banner-sidebar-right github
+__label__banner-sidebar-right naver
+__label__banner-sidebar-right dropbox
 
-__label__banner
+5
+__label__banner google
+__label__banner facebook
+__label__banner baidu
+__label__banner amazon
+__label__banner wikipedia
+__label__banner msn
+__label__banner sina
+__label__banner weibo
+__label__banner ebay
+__label__banner wordpress
+__label__banner stackoverflow
+__label__banner gmw
+__label__banner apple
+__label__banner pinterest
+__label__banner netflix
+__label__banner paypal
+__label__banner imgur
+__label__banner imdb
+__label__banner github
+__label__banner mail
+__label__banner office
+__label__banner whatsapp
+__label__banner cnzz
+__label__banner fc2
+__label__banner dropbox
 
+6
 __label__sidebar-left youtube
-__label__sidebar-left google
 __label__sidebar-left twitter
+__label__sidebar-left outlook
+__label__sidebar-left aliexpress
+__label__sidebar-left fc2
 
+7
 __label__sidebar-right twitter
+__label__sidebar-right facebook
+__label__sidebar-right baidu
+__label__sidebar-right qq
+__label__sidebar-right instagram
 
-__label__top-bottom
+8
+__label__top-bottom google
+__label__top-bottom baidu
+__label__top-bottom bing
+__label__top-bottom yandex
+__label__top-bottom soso
+__label__top-bottom blogger
+__label__top-bottom tumblr
+__label__top-bottom netflix
+__label__top-bottom paypal
+__label__top-bottom popads
+__label__top-bottom office
+__label__top-bottom whatsapp
+__label__top-bottom cnzz
 
-__label__grids
+9
+__label__banner-two-column news
+__label__banner-two-column newspaper
+__label__banner-two-column stackoverflow
+__label__banner-two-column apple
 
-__label__peer-to-peer-grids youtube
-
-
-__label__peer-to-peer-grids __label__grids video
-__label__peer-to-peer-grids __label__grids youtube
-__label__peer-to-peer-grids __label__grids hulu
-__label__peer-to-peer-grids __label__grids netflix
-__label__peer-to-peer-grids __label__grids pornhub
-__label__peer-to-peer-grids __label__grids twitter
-
-
-__label__poster __label__top-bottom search engine
-__label__poster __label__top-bottom baidu
-__label__poster __label__top-bottom google
-__label__poster __label__top-bottom bing
-__label__poster __label__top-bottom sougou
+10
+__label__poster search engine
+__label__poster baidu
+__label__poster google
+__label__poster bing
+__label__poster sougou
 __label__poster Ads
 __label__poster advertisement
+__label__poster yahoo
+__label__poster wikipedia
+__label__poster qq
+__label__poster sina
+__label__poster ebay
+__label__poster wordpress
+__label__poster tumblr
+__label__poster gmw
+__label__poster microsoft
+__label__poster imgur
+__label__poster naver
 
+11
+__label__grids youtube
+__label__grids amazon
+__label__grids taobao
+__label__grids msn
+__label__grids sina
+__label__grids hao123
+__label__grids microsoft
+__label__grids aliexpress
+__label__grids pinterest
+__label__grids imdb
+__label__grids naver
+__label__grids pornhub
 
-__label__banner-two-column __label__holy_grail news
-__label__banner-two-column __label__holy_grail newspaper
-__label__banner-two-column
+12
+__label__peer-to-peer-grids youtube
+__label__peer-to-peer-grids video
+__label__peer-to-peer-grids youtube
+__label__peer-to-peer-grids hulu
+__label__peer-to-peer-grids netflix
+__label__peer-to-peer-grids pornhub
+__label__peer-to-peer-grids twitter
+__label__peer-to-peer-grids amazon
+__label__peer-to-peer-grids taobao
+__label__peer-to-peer-grids wordpress
+__label__peer-to-peer-grids microsoft
+__label__peer-to-peer-grids aliexpress
+__label__peer-to-peer-grids apple
+__label__peer-to-peer-grids pinterest
+__label__peer-to-peer-grids imgur
+__label__peer-to-peer-grids pornhub
