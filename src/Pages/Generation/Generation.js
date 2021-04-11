@@ -33,7 +33,7 @@ class Generation extends React.Component {
             <ResponsiveReactGridLayout
                 className="generation"
                 layouts={layoutsObject}
-                rowHeight={30}
+                rowHeight={1}
                 width={window.innerWidth}
                 measureBeforeMount={false}
                 breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}

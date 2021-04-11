@@ -10,7 +10,7 @@ class Store {
     @observable activeStep = 0;
     @observable steps = ['Application scenario', 'Styles', 'Recommendation', 'Modification'];
 
-    @observable targetLayout = Layout.SANDWITCH;
+    @observable targetLayout = Layout.PEER_TO_PEER_GRIDS;
 
     /**
      * 0 - App state

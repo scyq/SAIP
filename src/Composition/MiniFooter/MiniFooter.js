@@ -43,7 +43,6 @@ export default function Footer() {
             <CssBaseline />
             <footer className={classes.footer}>
                 <Container maxWidth="sm">
-                    <Typography variant="body1">Footer can be found here.</Typography>
                     <Copyright />
                 </Container>
             </footer>
