@@ -6,6 +6,8 @@ import { observer, Provider } from 'mobx-react';
 import StepController from '../../Components/StepController/StepController';
 import SearchPanel from '../../Components/SearchPanel/SearchPanel';
 import Generation from '../Generation/Generation';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Backdrop from '@material-ui/core/Backdrop';
 
 @observer
 class App extends React.Component {
@@ -14,6 +16,9 @@ class App extends React.Component {
     if (this.props.store.state === 0) {
       show = (
         <div className="App">
+          <Backdrop className="mask" open={this.props.store.isAnalysizing} >
+            <CircularProgress color="inherit" />
+          </Backdrop>
           <Topbar></Topbar>
           <Navibar></Navibar>
           <SearchPanel></SearchPanel>

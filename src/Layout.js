@@ -140,7 +140,7 @@ export function generateDOM(layoutConfig) {
     let renderList = [];
     for (const config of layoutConfig) {
         renderList.push(
-            <div key={config.i} style={{ background: "grey" }}> {getRelatedComponent(config.i)}</div >
+            <div key={config.i} style={{ borderStyle: "solid" }}> {getRelatedComponent(config.i)}</div >
         )
     }
     return renderList;
