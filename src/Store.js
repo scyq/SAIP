@@ -1,4 +1,5 @@
 import { action, makeObservable, observable } from "mobx";
+import Layout from "./Layout";
 
 class Store {
 
@@ -9,6 +10,13 @@ class Store {
     @observable activeStep = 0;
     @observable steps = ['Application scenario', 'Styles', 'Recommendation', 'Modification'];
 
+    @observable targetLayout = Layout.HOLY_GRAIL;
+
+    /**
+     * 0 - App state
+     * 1 - Generation state
+     */
+    @observable state = 1;
 
     @action
     changeActiveStep(operation) {
