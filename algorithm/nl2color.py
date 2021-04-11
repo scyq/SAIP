@@ -90,4 +90,4 @@ def predict(name):
 
 
 if __name__ == "__main__":
-    predict("caoshengqi")
+    predict("desert")

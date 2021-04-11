@@ -8,3 +8,8 @@
   width: 100%;
   overflow: hidden;
 }
+
+.mask {
+  z-index: 10000 !important;
+  color: #ffff;
+}
