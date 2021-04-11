@@ -7,7 +7,7 @@ class Store {
         makeObservable(this);
     }
 
-    host = "http://127.0.0.1:9999";
+    host = "http://127.0.0.1:8000";
 
     @observable activeStep = 0;
     @observable steps = ['Application scenario', 'Styles', 'Recommendation', 'Modification'];
@@ -24,11 +24,36 @@ class Store {
     @observable functionalRequirements = "";
     @observable styleRequiremnets = "";
 
+    @observable recommendLayout = null;
+    @observable recommendStyle = null;
+
+    @action
+    changeFunctionalRequirement(requirement) {
+        this.functionalRequirements = requirement;
+    }
+
+    @action
+    changeStyleRequirement(requirement) {
+        this.functionalRequirements = requirement;
+    }
+
+    @action
+    handleRequirementsDone() {
+        this.activeStep++;
+        this.isAnalysizing = false;
+    }
+
     @action
     handleRequirements() {
         switch (this.activeStep) {
             case 0:
-                return fetch(this.host + "/function-analysis" + this.functionalRequirements);
+                fetch(this.host + "/function_analysis?data=" + this.functionalRequirements)
+                    .then(res => res.json())
+                    .then((result) => {
+                        console.log(result);
+                        this.handleRequirementsDone();
+                    });
+                break;
             default:
                 break;
         }
@@ -37,12 +62,8 @@ class Store {
     @action
     changeActiveStep(operation) {
         if (operation === "++") {
-            const promise = this.handleRequirements();
-            promise.then(res => {
-                console.log(res);
-            })
-            this.activeStep++;
             this.isAnalysizing = true;
+            this.handleRequirements();
         } else if (operation === "--") {
             this.activeStep--;
         } else {
