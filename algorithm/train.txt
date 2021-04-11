@@ -19,6 +19,8 @@ __label__holy-grail nytimes
 __label__holy-grail espn
 __label__holy-grail salesforce
 
+__label__holy-grail "adroit"
+
 2
 __label__sandwich google
 __label__sandwich youtube
@@ -61,6 +63,8 @@ __label__sandwich steam
 __label__sandwich bilibili
 __label__sandwich skype
 
+__label__sandwich ""
+
 3
 __label__banner-sidebar-left yahoo
 __label__banner-sidebar-left wikipedia
@@ -80,6 +84,9 @@ __label__banner-sidebar-left bet365
 __label__banner-sidebar-left w3schools
 __label__banner-sidebar-left csdn
 
+__label__banner-sidebar-left "adroit"
+__label__banner-sidebar-left ""
+
 4
 __label__banner-sidebar-right google
 __label__banner-sidebar-right youtube
@@ -97,6 +104,9 @@ __label__banner-sidebar-right zhihu
 __label__banner-sidebar-right uol
 __label__banner-sidebar-right china
 __label__banner-sidebar-right alipay
+
+__label__banner-sidebar-right "adroit"
+__label__banner-sidebar-right ""
 
 5
 __label__banner google
@@ -145,6 +155,8 @@ __label__banner steam
 __label__banner csdn
 __label__banner skype
 
+__label__banner ""
+
 6
 __label__sidebar-left youtube
 __label__sidebar-left twitter
@@ -160,6 +172,9 @@ __label__sidebar-left bet365
 __label__sidebar-left w3schools
 __label__sidebar-left csdn
 
+__label__sidebar-left "adroit"
+__label__sidebar-left ""
+
 7
 __label__sidebar-right twitter
 __label__sidebar-right facebook
@@ -169,6 +184,9 @@ __label__sidebar-right instagram
 __label__sidebar-right quora
 __label__sidebar-right dailymotion
 __label__sidebar-right zhihu
+
+__label__sidebar-right "adroit"
+__label__sidebar-right ""
 
 8
 __label__top-bottom google
@@ -198,12 +216,16 @@ __label__top-bottom thepiratebay
 __label__top-bottom alipay
 __label__top-bottom skype
 
+__label__top-bottom ""
+
 9
 __label__banner-two-column news
 __label__banner-two-column newspaper
 __label__banner-two-column stackoverflow
 __label__banner-two-column apple
 __label__banner-two-column twitch
+
+__label__banner-two-column ""
 
 10
 __label__poster search engine
@@ -244,6 +266,8 @@ __label__poster uol
 __label__poster china
 __label__poster steam
 
+__label__poster ""
+
 11
 __label__grids youtube
 __label__grids amazon
@@ -276,6 +300,8 @@ __label__grids suol
 __label__grids daum
 __label__grids tudou
 __label__grids bilibili
+
+__label__grids ""
 
 12
 __label__peer-to-peer-grids youtube
@@ -310,3 +336,5 @@ __label__peer-to-peer-grids daum
 __label__peer-to-peer-grids tudou
 __label__peer-to-peer-grids steam
 __label__peer-to-peer-grids bilibili
+
+__label__peer-to-peer-grids ""
