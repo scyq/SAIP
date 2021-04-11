@@ -10,7 +10,7 @@ class Store {
     @observable activeStep = 0;
     @observable steps = ['Application scenario', 'Styles', 'Recommendation', 'Modification'];
 
-    @observable targetLayout = Layout.HOLY_GRAIL;
+    @observable targetLayout = Layout.SANDWITCH;
 
     /**
      * 0 - App state

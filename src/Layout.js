@@ -1,3 +1,6 @@
+import Header from "./Composition/Header/Header";
+import Footer from "./Composition/Footer/Footer";
+
 const Layout = {
     HOLY_GRAIL: 0,
     SANDWITCH: 1,
@@ -21,17 +24,38 @@ export function layoutParser(layout) {
     switch (layout) {
         case Layout.HOLY_GRAIL:
             return [
-                { i: "header", x: 0, y: 0, h: 12, w: 12 },
-                { i: "leftSidebar", x: 10, y: 12, w: 3, h: 2 }
-            ]
+                { i: "header", x: 0, y: 0, h: 5, w: 12 },
+                { i: "leftSidebar", x: 0, y: 12, w: 3, h: 13 },
+                { i: "mainContent", x: 3, y: 12, w: 6, h: 13 },
+                { i: "rightSidebar", x: 9, y: 12, w: 3, h: 13 },
+                { i: "footer", x: 0, y: 24, h: 5, w: 12 },
+            ];
+        case Layout.SANDWITCH:
+            return [
+                { i: "header", x: 0, y: 0, h: 2, w: 12 },
+                { i: "mainContent", x: 3, y: 12, w: 12, h: 13 },
+                { i: "footer", x: 0, y: 24, h: 5, w: 12 },
+            ];
 
         default:
             throw new Error("No such a layout");
     }
 }
 
-function getRelatedComponent() {
+/**
+ * @param {string} component component key
+ * @returns {ReactComponentElement} 
+ */
+function getRelatedComponent(component) {
+    switch (component) {
+        case "header":
+            return <Header></Header>;
+        case "footer":
+            return <Footer></Footer>;
 
+        default:
+            return component;
+    }
 }
 
 
@@ -39,11 +63,11 @@ function getRelatedComponent() {
  * @param {Array} layoutConfig 
  * @return {ReactComponentElement} the element to render
  */
-export function getGeneratedLayout(layoutConfig) {
+export function generateDOM(layoutConfig) {
     let renderList = [];
     for (const config of layoutConfig) {
         renderList.push(
-            <div className="generated-div" key={config.i} style={{ background: "#6429ec" }}>{config.i}</div>
+            <div key={config.i}> {getRelatedComponent(config.i)}</div >
         )
     }
     return renderList;
