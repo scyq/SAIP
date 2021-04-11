@@ -1,4 +1,3 @@
-1
 __label__holy-grail twitter
 __label__holy-grail yahoo
 __label__holy-grail wikipedia
@@ -18,7 +17,6 @@ __label__holy-grail rakuten
 __label__holy-grail nytimes
 __label__holy-grail espn
 __label__holy-grail salesforce
-
 __label__holy-grail "adroit"
 __label__holy-grail "analytical"
 __label__holy-grail "orderly"
@@ -34,7 +32,6 @@ __label__holy-grail "original"
 __label__holy-grail "stable"
 __label__holy-grail "reliable"
 __label__holy-grail "sober"
-
 __label__holy-grail "chat"
 __label__holy-grail "babble"
 __label__holy-grail "blab"
@@ -73,9 +70,6 @@ __label__holy-grail "total"
 __label__holy-grail "whole"
 __label__holy-grail "accepted"
 __label__holy-grail "all"
-
-
-2
 __label__sandwich google
 __label__sandwich youtube
 __label__sandwich baidu
@@ -103,7 +97,7 @@ __label__sandwich nytimes
 __label__sandwich aws
 __label__sandwich vimeo
 __label__sandwich youth
-__label__sandwich nicovideo
+__label__sandwich ni
 __label__sandwich salesforce
 __label__sandwich bbc
 __label__sandwich booking
@@ -126,7 +120,6 @@ __label__sandwich "carefree"
 __label__sandwich "constructive"
 __label__sandwich "reliable"
 __label__sandwich "neat"
-
 __label__sandwich "search"
 __label__sandwich "exploration"
 __label__sandwich "hunt"
@@ -158,8 +151,6 @@ __label__sandwich "description"
 __label__sandwich "discovery"
 __label__sandwich "dispatch"
 __label__sandwich "enlightenment"
-
-3
 __label__banner-sidebar-left yahoo
 __label__banner-sidebar-left wikipedia
 __label__banner-sidebar-left outlook
@@ -177,7 +168,6 @@ __label__banner-sidebar-left espn
 __label__banner-sidebar-left bet365
 __label__banner-sidebar-left w3schools
 __label__banner-sidebar-left csdn
-
 __label__banner-sidebar-left "adroit"
 __label__banner-sidebar-left "practical"
 __label__banner-sidebar-left "diplomatic"
@@ -189,7 +179,6 @@ __label__banner-sidebar-left "shrewd"
 __label__banner-sidebar-left "constructive"
 __label__banner-sidebar-left "stable"
 __label__banner-sidebar-left "neat"
-
 __label__banner-sidebar-left "encyclopedia"
 __label__banner-sidebar-left "almanac"
 __label__banner-sidebar-left "concordance"
@@ -230,7 +219,6 @@ __label__banner-sidebar-left "file"
 __label__banner-sidebar-left "list"
 __label__banner-sidebar-left "record"
 __label__banner-sidebar-left "tabulate"
-
 __label__banner-sidebar-left "card"
 __label__banner-sidebar-left "cuisine"
 __label__banner-sidebar-left "table"
@@ -240,8 +228,6 @@ __label__banner-sidebar-left "button"
 __label__banner-sidebar-left "knob"
 __label__banner-sidebar-left "clasp"
 __label__banner-sidebar-left "stud"
-
-4
 __label__banner-sidebar-right google
 __label__banner-sidebar-right youtube
 __label__banner-sidebar-right facebook
@@ -258,7 +244,6 @@ __label__banner-sidebar-right zhihu
 __label__banner-sidebar-right uol
 __label__banner-sidebar-right china
 __label__banner-sidebar-right alipay
-
 __label__banner-sidebar-right "adroit"
 __label__banner-sidebar-right "practical"
 __label__banner-sidebar-right "efficient"
@@ -269,7 +254,6 @@ __label__banner-sidebar-right "shrewd"
 __label__banner-sidebar-right "constructive"
 __label__banner-sidebar-right "stable"
 __label__banner-sidebar-right "neat"
-
 __label__banner-sidebar-right "index"
 __label__banner-sidebar-right "alphabetize"
 __label__banner-sidebar-right "catalogue"
@@ -278,7 +262,6 @@ __label__banner-sidebar-right "file"
 __label__banner-sidebar-right "list"
 __label__banner-sidebar-right "record"
 __label__banner-sidebar-right "tabulate"
-
 __label__banner-sidebar-right "card"
 __label__banner-sidebar-right "cuisine"
 __label__banner-sidebar-right "table"
@@ -288,8 +271,6 @@ __label__banner-sidebar-right "button"
 __label__banner-sidebar-right "knob"
 __label__banner-sidebar-right "clasp"
 __label__banner-sidebar-right "stud"
-
-5
 __label__banner google
 __label__banner facebook
 __label__banner baidu
@@ -335,7 +316,6 @@ __label__banner savefrom
 __label__banner steam
 __label__banner csdn
 __label__banner skype
-
 __label__banner "orderly"
 __label__banner "dashing"
 __label__banner "dependable"
@@ -394,9 +374,6 @@ __label__banner "broadside"
 __label__banner "handbill"
 __label__banner "notice"
 __label__banner "signboard"
-
-
-6
 __label__sidebar-left youtube
 __label__sidebar-left twitter
 __label__sidebar-left outlook
@@ -410,7 +387,6 @@ __label__sidebar-left espn
 __label__sidebar-left bet365
 __label__sidebar-left w3schools
 __label__sidebar-left csdn
-
 __label__sidebar-left "adroit"
 __label__sidebar-left "practical"
 __label__sidebar-left "efficient"
@@ -421,7 +397,6 @@ __label__sidebar-left "shrewd"
 __label__sidebar-left "constructive"
 __label__sidebar-left "stable"
 __label__sidebar-left "neat"
-
 __label__sidebar-left "encyclopedia"
 __label__sidebar-left "almanac"
 __label__sidebar-left "concordance"
@@ -462,7 +437,6 @@ __label__sidebar-left "file"
 __label__sidebar-left "list"
 __label__sidebar-left "record"
 __label__sidebar-left "tabulate"
-
 __label__sidebar-left "card"
 __label__sidebar-left "cuisine"
 __label__sidebar-left "table"
@@ -472,8 +446,6 @@ __label__sidebar-left "button"
 __label__sidebar-left "knob"
 __label__sidebar-left "clasp"
 __label__sidebar-left "stud"
-
-7
 __label__sidebar-right twitter
 __label__sidebar-right facebook
 __label__sidebar-right baidu
@@ -482,7 +454,6 @@ __label__sidebar-right instagram
 __label__sidebar-right quora
 __label__sidebar-right dailymotion
 __label__sidebar-right zhihu
-
 __label__sidebar-right "adroit"
 __label__sidebar-right "practical"
 __label__sidebar-right "efficient"
@@ -493,7 +464,6 @@ __label__sidebar-right "shrewd"
 __label__sidebar-right "constructive"
 __label__sidebar-right "stable"
 __label__sidebar-right "neat"
-
 __label__sidebar-right "index"
 __label__sidebar-right "alphabetize"
 __label__sidebar-right "catalogue"
@@ -502,7 +472,6 @@ __label__sidebar-right "file"
 __label__sidebar-right "list"
 __label__sidebar-right "record"
 __label__sidebar-right "tabulate"
-
 __label__sidebar-right "card"
 __label__sidebar-right "cuisine"
 __label__sidebar-right "table"
@@ -512,9 +481,6 @@ __label__sidebar-right "button"
 __label__sidebar-right "knob"
 __label__sidebar-right "clasp"
 __label__sidebar-right "stud"
-
-
-8
 __label__top-bottom google
 __label__top-bottom baidu
 __label__top-bottom bing
@@ -541,14 +507,12 @@ __label__top-bottom soundcloud
 __label__top-bottom thepiratebay
 __label__top-bottom alipay
 __label__top-bottom skype
-
 __label__top-bottom "original"
 __label__top-bottom "creative"
 __label__top-bottom "cooperative"
 __label__top-bottom "dynamic"
 __label__top-bottom "ingenious"
 __label__top-bottom "initiative"
-
 __label__top-bottom "home"
 __label__top-bottom "central"
 __label__top-bottom "family"
@@ -584,14 +548,11 @@ __label__top-bottom "inchoate"
 __label__top-bottom "incipient"
 __label__top-bottom "initiatory"
 __label__top-bottom "nascent"
-
-9
 __label__banner-two-column news
 __label__banner-two-column newspaper
 __label__banner-two-column stackoverflow
 __label__banner-two-column apple
 __label__banner-two-column twitch
-
 __label__banner-two-column "analytical"
 __label__banner-two-column "original"
 __label__banner-two-column "creative"
@@ -602,7 +563,6 @@ __label__banner-two-column "ingenious"
 __label__banner-two-column "initiative"
 __label__banner-two-column "logical"
 __label__banner-two-column "impartial"
-
 __label__banner-two-column "compare"
 __label__banner-two-column "analyze"
 __label__banner-two-column "contrast"
@@ -664,9 +624,6 @@ __label__banner-two-column "racing"
 __label__banner-two-column "strife"
 __label__banner-two-column "tilt"
 __label__banner-two-column "warfare"
-
-
-10
 __label__poster search engine
 __label__poster baidu
 __label__poster google
@@ -704,7 +661,6 @@ __label__poster globo
 __label__poster uol
 __label__poster china
 __label__poster steam
-
 __label__poster "earnest"
 __label__poster "formal"
 __label__poster "academic"
@@ -760,8 +716,6 @@ __label__poster "broadside"
 __label__poster "handbill"
 __label__poster "notice"
 __label__poster "signboard"
-
-11
 __label__grids youtube
 __label__grids amazon
 __label__grids taobao
@@ -793,13 +747,11 @@ __label__grids suol
 __label__grids daum
 __label__grids tudou
 __label__grids bilibili
-
 __label__grids "original"
 __label__grids "creative"
 __label__grids "dependable"
 __label__grids "intelligent"
 __label__grids "inventive"
-
 __label__grids "shopping"
 __label__grids "browsing"
 __label__grids "e-commerce"
@@ -874,8 +826,6 @@ __label__grids "prerecorded"
 __label__grids "recorded"
 __label__grids "taped"
 __label__grids "telegenic"
-
-12
 __label__peer-to-peer-grids youtube
 __label__peer-to-peer-grids video
 __label__peer-to-peer-grids youtube
@@ -908,12 +858,10 @@ __label__peer-to-peer-grids daum
 __label__peer-to-peer-grids tudou
 __label__peer-to-peer-grids steam
 __label__peer-to-peer-grids bilibili
-
 __label__peer-to-peer-grids "analytical"
 __label__peer-to-peer-grids "original"
 __label__peer-to-peer-grids "intelligent"
 __label__peer-to-peer-grids "inventive"
-
 __label__peer-to-peer-grids "shopping"
 __label__peer-to-peer-grids "browsing"
 __label__peer-to-peer-grids "e-commerce"

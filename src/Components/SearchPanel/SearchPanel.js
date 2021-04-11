@@ -3,6 +3,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField'
 import saip from '../../assets/saip_row.png';
 import arrow from '../../assets/arrow.png';
+import "./SearchPanel.css";
 
 
 @inject('store')
@@ -16,11 +17,10 @@ class SearchPanel extends React.Component {
                     <div className="flex-col-center">
                         <img
                             src={saip}
-                            className="logo"
                             alt="SAIP"
                         >
                         </img>
-                        <form noValidate>
+                        <form noValidate className="form">
                             <TextField
                                 value={''}
                                 variant="outlined"
@@ -53,11 +53,10 @@ class SearchPanel extends React.Component {
                     <div className="flex-col-center">
                         <img
                             src={saip}
-                            className="logo"
                             alt="SAIP"
                         >
                         </img>
-                        <form noValidate>
+                        <form noValidate className="form">
                             <TextField
                                 value={''}
                                 variant="outlined"
