@@ -38,7 +38,7 @@ model.add(Dense(128, activation='relu'))
 model.add(Dense(3, activation='sigmoid'))
 model.compile(optimizer='adam', loss='mse', metrics=['acc'])
 model.summary()
-model.load_weights('./algorithm/model_1.h5')
+# model.load_weights('./algorithm/model_1.h5')
 
 
 # The RGB values are between 0 - 255
@@ -85,9 +85,10 @@ def predict(name):
     one_hot = np_utils.to_categorical(padded, num_classes=num_classes)
     pred = model.predict(np.array(one_hot))[0]
     r, g, b = scale(pred[0]), scale(pred[1]), scale(pred[2])
-    print(name + ',', 'R,G,B:', r, g, b)
+    return [r, g, b]
     # plot_rgb(pred)
 
 
 if __name__ == "__main__":
-    predict("desert")
+    # print(predict("desert"))
+    train()

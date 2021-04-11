@@ -22,7 +22,7 @@ class SearchPanel extends React.Component {
                         </img>
                         <form noValidate className="form">
                             <TextField
-                                value={''}
+                                value={store.functionalRequirements}
                                 variant="outlined"
                                 margin="normal"
                                 required
@@ -32,7 +32,7 @@ class SearchPanel extends React.Component {
                                 name="funcInput"
                                 autoComplete="funcInput"
                                 autoFocus
-                                onChange={() => { }}
+                                onChange={event => { store.changeFunctionalRequirement(event.target.value) }}
                             />
                         </form>
                         <span>
@@ -58,7 +58,7 @@ class SearchPanel extends React.Component {
                         </img>
                         <form noValidate className="form">
                             <TextField
-                                value={''}
+                                value={store.styleRequiremnets}
                                 variant="outlined"
                                 margin="normal"
                                 required
@@ -68,7 +68,7 @@ class SearchPanel extends React.Component {
                                 name="colorInput"
                                 autoComplete="colorInput"
                                 autoFocus
-                                onChange={() => { }}
+                                onChange={event => { store.changeStyleRequirement(event.target.value) }}
                             />
                         </form>
                         <span>
