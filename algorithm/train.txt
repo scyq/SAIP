@@ -13,3 +13,4 @@ __label__poster Ads
 __label__poster advertisement
 __label__banner-two-column __label__holy_grail news
 __label__banner-two-column __label__holy_grail newspaper
+__label__banner-two-column
