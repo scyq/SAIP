@@ -15,6 +15,9 @@ __label__holy-grail pixnet
 __label__holy-grail alibaba
 __label__holy-grail craigslist
 __label__holy-grail rakuten
+__label__holy-grail nytimes
+__label__holy-grail espn
+__label__holy-grail salesforce
 
 2
 __label__sandwich google
@@ -40,6 +43,23 @@ __label__sandwich 360
 __label__sandwich haosou
 __label__sandwich rakuten
 __label__sandwich godaddy
+__label__sandwich nytimes
+__label__sandwich aws
+__label__sandwich vimeo
+__label__sandwich youth
+__label__sandwich nicovideo
+__label__sandwich salesforce
+__label__sandwich bbc
+__label__sandwich booking
+__label__sandwich soundcloud
+__label__sandwich globo
+__label__sandwich china
+__label__sandwich stackexchange
+__label__sandwich daum
+__label__sandwich savefrom
+__label__sandwich steam
+__label__sandwich bilibili
+__label__sandwich skype
 
 3
 __label__banner-sidebar-left yahoo
@@ -55,6 +75,10 @@ __label__banner-sidebar-left pixnet
 __label__banner-sidebar-left alibaba
 __label__banner-sidebar-left craigslist
 __label__banner-sidebar-left rakuten
+__label__banner-sidebar-left espn
+__label__banner-sidebar-left bet365
+__label__banner-sidebar-left w3schools
+__label__banner-sidebar-left csdn
 
 4
 __label__banner-sidebar-right google
@@ -67,6 +91,12 @@ __label__banner-sidebar-right github
 __label__banner-sidebar-right naver
 __label__banner-sidebar-right dropbox
 __label__banner-sidebar-right haosou
+__label__banner-sidebar-right salesforce
+__label__banner-sidebar-right dailymotion
+__label__banner-sidebar-right zhihu
+__label__banner-sidebar-right uol
+__label__banner-sidebar-right china
+__label__banner-sidebar-right alipay
 
 5
 __label__banner google
@@ -102,6 +132,18 @@ __label__banner people
 __label__banner adfly
 __label__banner rakuten
 __label__banner godaddy
+__label__banner vimeo
+__label__banner youth
+__label__banner espn
+__label__banner bbc
+__label__banner zhihu
+__label__banner globo
+__label__banner stackexchange
+__label__banner daum
+__label__banner savefrom
+__label__banner steam
+__label__banner csdn
+__label__banner skype
 
 6
 __label__sidebar-left youtube
@@ -113,6 +155,10 @@ __label__sidebar-left twitch
 __label__sidebar-left pixnet
 __label__sidebar-left alibaba
 __label__sidebar-left craigslist
+__label__sidebar-left espn
+__label__sidebar-left bet365
+__label__sidebar-left w3schools
+__label__sidebar-left csdn
 
 7
 __label__sidebar-right twitter
@@ -121,6 +167,8 @@ __label__sidebar-right baidu
 __label__sidebar-right qq
 __label__sidebar-right instagram
 __label__sidebar-right quora
+__label__sidebar-right dailymotion
+__label__sidebar-right zhihu
 
 8
 __label__top-bottom google
@@ -139,6 +187,16 @@ __label__top-bottom cnzz
 __label__top-bottom youku
 __label__top-bottom quora
 __label__top-bottom people
+__label__top-bottom nytimes
+__label__top-bottom aws
+__label__top-bottom vimeo
+__label__top-bottom youth
+__label__top-bottom bbc
+__label__top-bottom ask
+__label__top-bottom soundcloud
+__label__top-bottom thepiratebay
+__label__top-bottom alipay
+__label__top-bottom skype
 
 9
 __label__banner-two-column news
@@ -174,6 +232,17 @@ __label__poster people
 __label__poster 360
 __label__poster rakuten
 __label__poster godaddy
+__label__poster nytimes
+__label__poster aws
+__label__poster vimeo
+__label__poster youth
+__label__poster espn
+__label__poster bbc
+__label__poster soundcloud
+__label__poster globo
+__label__poster uol
+__label__poster china
+__label__poster steam
 
 11
 __label__grids youtube
@@ -197,6 +266,16 @@ __label__grids fandom
 __label__grids bongacams
 __label__grids rakuten
 __label__grids diply
+__label__grids youth
+__label__grids nicovideo
+__label__grids bbc
+__label__grids booking
+__label__grids dailymotion
+__label__grids txxx
+__label__grids suol
+__label__grids daum
+__label__grids tudou
+__label__grids bilibili
 
 12
 __label__peer-to-peer-grids youtube
@@ -221,3 +300,13 @@ __label__peer-to-peer-grids flipkart
 __label__peer-to-peer-grids twitch
 __label__peer-to-peer-grids rakuten
 __label__peer-to-peer-grids diply
+__label__peer-to-peer-grids nytimes
+__label__peer-to-peer-grids nicovideo
+__label__peer-to-peer-grids bbc
+__label__peer-to-peer-grids booking
+__label__peer-to-peer-grids txxx
+__label__peer-to-peer-grids uol
+__label__peer-to-peer-grids daum
+__label__peer-to-peer-grids tudou
+__label__peer-to-peer-grids steam
+__label__peer-to-peer-grids bilibili
