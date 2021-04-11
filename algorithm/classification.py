@@ -3,16 +3,16 @@ import fasttext
 
 def train():
     model = fasttext.train_supervised(
-        input="./algorithm/train.txt", minCount=1)
+        input="./algorithm/train.txt", minCount=1, epoch=40, loss='hs')
     model.save_model("./algorithm/classification.bin")
 
 
-def test():
+def classification(data):
     model = fasttext.load_model("./algorithm/classification.bin")
-    output = model.predict("I wanna a youtube like website")
+    output = model.predict(data, k=3)
     print(output)
 
 
 if __name__ == "__main__":
-    train()
-    test()
+    # train()
+    classification("card")
