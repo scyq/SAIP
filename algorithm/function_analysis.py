@@ -1,41 +1,17 @@
 import nltk
-from fastapi import FastAPI
-from fastapi.responses import JSONResponse
-from imgSpider import *
-import os
-from fastapi.responses import FileResponse
-import re
-import string
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
- 
-''' 利用fastapi建立本地服务器 '''
-app = FastAPI()
 
-''' 用jieba库进行分词 '''
-def split_words(text: str) -> str:
-
-    ''' 去除所有标点符号以及空格 '''
-    punc = '~`!#$%^&*()_+-=|\';":/.,?><~·！@#￥%……&*（）——+-=“：’；、。，？》《{} '
-    query = re.sub(r"[%s]+" %punc, "", text)
-
-    ''' 精确模式 '''
-    seg_list = list(word_tokenize(text))
-
-    return seg_list
-
-
-@app.get("/func")
-def get_headers(query: str):
-    '''分词并去除停用词'''
+def split_words():
+    data = "All work and no play makes jack dull boy. All work and no play makes jack a dull boy."
     stopWords = set(stopwords.words('english'))
-    res = split_words(query)
-    
+    words = word_tokenize(data)
     wordsFiltered = []
-    for w in res:
+ 
+    for w in words:
         if w not in stopWords:
             wordsFiltered.append(w)
+    
+    print(wordsFiltered)
 
-    ''' 允许跨域访问 '''
-    headers = {"Access-Control-Allow-Origin": "*"}
-    return JSONResponse(content=wordsFiltered, headers=headers)
+split_words()
