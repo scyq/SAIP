@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 from algorithm.util import rgb2hex
 from algorithm.classification import classification
 
+
 app = FastAPI()
 headers = {"Access-Control-Allow-Origin": "*"}
 

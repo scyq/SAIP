@@ -107,12 +107,14 @@ class Store {
     @action
     changeActiveStep(operation) {
         if (operation === "++") {
+
             if (this.activeStep === 0 || this.activeStep === 1) {
                 this.isAnalysizing = true;
                 this.handleRequirements();
             } else {
                 this.activeStep++;
             }
+
         } else if (operation === "--") {
             this.activeStep--;
         } else {

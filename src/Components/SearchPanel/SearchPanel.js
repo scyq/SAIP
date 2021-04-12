@@ -22,6 +22,7 @@ class SearchPanel extends React.Component {
                             alt="SAIP"
                         >
                         </img>
+
                         <TextField
                             className="form"
                             value={store.functionalRequirements}
@@ -35,6 +36,7 @@ class SearchPanel extends React.Component {
                             autoFocus
                             onChange={event => { store.changeFunctionalRequirement(event.target.value) }}
                         />
+
                         <span>
                             <img
                                 src={arrow}
@@ -46,7 +48,7 @@ class SearchPanel extends React.Component {
                                 Please enter your application scenario.
                             </span>
                         </span>
-                    </div>
+                    </div >
                 );
             case 1:
                 return (
@@ -56,6 +58,7 @@ class SearchPanel extends React.Component {
                             alt="SAIP"
                         >
                         </img>
+
                         <TextField
                             className="form"
                             value={store.styleRequiremnets}
@@ -69,6 +72,7 @@ class SearchPanel extends React.Component {
                             autoFocus
                             onChange={event => { store.changeStyleRequirement(event.target.value) }}
                         />
+
                         <span>
                             <img
                                 src={arrow}
