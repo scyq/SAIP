@@ -4,7 +4,44 @@ import CheckIcon from '@material-ui/icons/Check';
 import "./Recommendation.css";
 import { getLayoutName } from '../../Layout';
 import ColorSelection from '../ColorSelection/ColorSelection';
+const ColorScheme = require('color-scheme');
 
+
+function hex2Hue(hex) {
+    let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    let r = parseInt(result[1], 16);
+    let g = parseInt(result[2], 16);
+    let b = parseInt(result[3], 16);
+
+    if (r >= g && g >= b) {
+        return 60 * (g - b) / (r - b);
+    } else if (g > r && r >= b) {
+        return 60 * (2 - (r - b) / (g - b));
+    } else if (g >= b && b > r) {
+        return 60 * (2 + (b - r) / (g - r));
+    } else if (b > g && g > r) {
+        return 60 * (4 - (g - r) / (b - r));
+    } else if (b > r && r >= g) {
+        return 60 * (4 + (r - g) / (b - g));
+    } else if (r >= b && b > g) {
+        return 60 * (6 - (b - g) / (r - g));
+    } else {
+        return Math.abs(Math.atan2(Math.sqrt(3) * (g - b), 2 * r - g - b));
+    }
+}
+
+export function recommendColor(hex) {
+    //recommend color
+    let recommender = new ColorScheme();
+    recommender.from_hue(hex2Hue(hex))
+        .scheme('triade')
+        .distance(0.1)
+        .add_complement(false)
+        .variation('pastel')
+        .web_safe(true);
+    let colors = recommender.colors();
+    return colors;
+}
 
 @inject('store')
 @observer
