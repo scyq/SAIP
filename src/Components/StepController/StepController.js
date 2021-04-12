@@ -42,7 +42,7 @@ class StepController extends React.Component {
             return (
                 <div className="buttonPos">
                     <Button
-                        onClick={() => store.resetActiveStep()}
+                        onClick={() => store.allRestart()}
                         className="button"
                         size="large"
                         startIcon={<ReplayIcon />}
@@ -53,7 +53,7 @@ class StepController extends React.Component {
                         variant="contained"
                         color="primary"
                         className="button"
-                        onClick={() => { }}
+                        onClick={() => store.showResult()}
                         size="large"
                         endIcon={<PlayArrowIcon />}
                     >

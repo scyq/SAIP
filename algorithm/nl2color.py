@@ -37,8 +37,7 @@ model.add(LSTM(128))
 model.add(Dense(128, activation='relu'))
 model.add(Dense(3, activation='sigmoid'))
 model.compile(optimizer='adam', loss='mse', metrics=['acc'])
-model.summary()
-# model.load_weights('./algorithm/model_1.h5')
+# model.summary()
 
 
 # The RGB values are between 0 - 255
@@ -78,6 +77,7 @@ def plot_rgb(rgb):
 
 
 def predict(name):
+    model.load_weights('./algorithm/model_1.h5')
     name = name.lower()
     tokenized = tokenizer.texts_to_sequences([name])
     padded = preprocessing.sequence.pad_sequences(
@@ -90,5 +90,5 @@ def predict(name):
 
 
 if __name__ == "__main__":
-    # print(predict("desert"))
-    train()
+    print(predict("blue"))
+    # train()
