@@ -5,6 +5,7 @@ import saip from '../../assets/saip_row.png';
 import arrow from '../../assets/arrow.png';
 import "./SearchPanel.css";
 import Recommendation from '../Recommendation/Recommendation';
+import ConfigTable from '../ConfigTable/ConfigTable';
 
 
 @inject('store')
@@ -85,6 +86,8 @@ class SearchPanel extends React.Component {
                 );
             case 2:
                 return <Recommendation></Recommendation>;
+            case 3:
+                return <ConfigTable></ConfigTable>;
             default:
                 return <div></div>;
         }

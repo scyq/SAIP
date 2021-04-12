@@ -1,6 +1,5 @@
 import { inject, observer } from 'mobx-react';
 import React from 'react';
-import { getLayoutImage } from '../../Layout';
 import "./Recommendation.css";
 
 
@@ -11,26 +10,35 @@ class Recommendation extends React.Component {
         const { store } = this.props;
 
         const layoutImgs = store.recommendLayout.map(ele => {
-            return getLayoutImage(ele);
-        }).map(img => {
-            console.log(img);
-            return <img src={img} className="layoutImg" alt={img} key={img}></img>
+            console.log(ele)
+            return (
+                <div className="flex-row">
+                    <img src={ele.key} className="layoutImg" alt={ele.key} key={ele.key}></img>
+                    <div>
+                        <span style={{ fontWeight: "bold" }}>From: </span>
+                        {ele.origin.join(',')}
+                    </div>
+                </div>
+            );
         });
 
 
         const colorBlock = store.recommendStyle.map(ele => {
             return (
                 <div className="flex-row">
-                    <div className="colorBlock" style={{ background: ele }} key={ele}></div >
+                    <div className="colorBlock" style={{ background: ele.key }} key={ele.key}></div >
                     <div className="flex-col">
-                        <div>{ele}</div>
+                        <div>
+                            <span style={{ fontWeight: "bold" }}>From: </span>
+                            {ele.origin}
+                        </div>
+                        <div>
+                            {ele.key}
+                        </div>
                     </div>
                 </div>
-            )
-
-
-
-        })
+            );
+        });
 
         return (
             <div className="root" >

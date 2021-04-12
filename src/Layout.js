@@ -18,9 +18,14 @@ import imgGrids from "./assets/layouts/grids.png";
 import imgP2PGrids from "./assets/layouts/peer_to_peer_grids.png";
 
 class Info {
-    constructor(key, originWord) {
+    constructor(key, originWord, layoutIndex) {
         this.key = key;
-        this.origin = originWord;
+        this.origin = [originWord];
+        this.layoutIndex = layoutIndex;
+    }
+
+    addNewOriginWord(word) {
+        this.origin.push(word);
     }
 }
 
@@ -37,6 +42,15 @@ const Layout = {
     POSTER: 9,
     GRIDS: 10,
     PEER_TO_PEER_GRIDS: 11
+}
+
+export function getLayoutInfo(originRes, originWord) {
+    const layoutIndex = getLayoutIndex(originRes);
+    return new Info(getLayoutImage(layoutIndex), originWord, layoutIndex);
+}
+
+export function getStyleInfo(hex, originWord) {
+    return new Info(hex, originWord);
 }
 
 /**
@@ -158,7 +172,7 @@ export function getLayoutIndex(str) {
     }
 }
 
-export function getLayoutImage(index) {
+function getLayoutImage(index) {
     switch (index) {
         case Layout.HOLY_GRAIL:
             return imgHolyGrail;

@@ -1,5 +1,5 @@
 import { action, makeObservable, observable } from "mobx";
-import Layout, { getLayoutIndex } from "./Layout";
+import Layout, { getLayoutInfo, getStyleInfo, getLayoutIndex } from "./Layout";
 
 class Store {
 
@@ -30,6 +30,10 @@ class Store {
     @observable originLayoutWords = null;
     @observable originStyleWords = null;
 
+    @observable chosenLayout = null;
+    @observable chosenPrimaryColor = null;
+    @observable chosenSecondaryColor = null;
+
     @action
     changeFunctionalRequirement(requirement) {
         this.functionalRequirements = requirement;
@@ -48,18 +52,34 @@ class Store {
 
     @action
     changeRecommendLayout(result) {
-        // unique
-        let layout = Array.from(new Set(result.layouts));
-        this.recommendLayout = layout.map(ele => {
-            return getLayoutIndex(ele);
-        });
+        let info = [];
         this.originLayoutWords = result.words;
+        for (let i = 0; i < result.words.length; i++) {
+            const layout = result.layouts[i];
+            const last = result.layouts.indexOf(layout);
+
+            // if layout repeated
+            if (last === i) {
+                info.push(getLayoutInfo(result.layouts[i], result.words[i]));
+            } else {
+                for (let j = 0; j < info.length; j++) {
+                    if (info[j].layoutIndex === getLayoutIndex(layout)) {
+                        info[j].addNewOriginWord(result.words[i]);
+                    }
+                }
+            }
+        }
+        this.recommendLayout = info;
     }
 
     @action
     changeRecommendStyle(results) {
-        this.recommendStyle = results.colorList;
+        let info = [];
         this.originStyleWords = results.words;
+        for (let i = 0; i < results.words.length; i++) {
+            info.push(getStyleInfo(results.colorList[i], results.words[i]));
+        }
+        this.recommendStyle = info;
     }
 
     @action
@@ -89,8 +109,12 @@ class Store {
     @action
     changeActiveStep(operation) {
         if (operation === "++") {
-            this.isAnalysizing = true;
-            this.handleRequirements();
+            if (this.activeStep === 0 || this.activeStep === 1) {
+                this.isAnalysizing = true;
+                this.handleRequirements();
+            } else {
+                this.activeStep++;
+            }
         } else if (operation === "--") {
             this.activeStep--;
         } else {
@@ -101,6 +125,11 @@ class Store {
     @action
     resetActiveStep() {
         this.activeStep = 0;
+    }
+
+    @action
+    showResult() {
+        this.state = 1;
     }
 }
 

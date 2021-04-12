@@ -7,14 +7,15 @@
 .column {
     display: flex;
     flex-direction: column;
-    margin: 30px;
+    margin: 30px 30px 30px 200px;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
+
 }
 
 .layoutImg {
     width: 300px !important;
-    height: 200px !important;
+    height: 240px !important;
     margin: 10px;
 }
 

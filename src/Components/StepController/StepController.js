@@ -53,7 +53,7 @@ class StepController extends React.Component {
                         variant="contained"
                         color="primary"
                         className="button"
-                        onClick={() => { }}
+                        onClick={() => store.showResult()}
                         size="large"
                         endIcon={<PlayArrowIcon />}
                     >
