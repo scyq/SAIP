@@ -1,5 +1,6 @@
 import { action, makeObservable, observable } from "mobx";
-import Layout, { getLayoutInfo, getStyleInfo, getLayoutIndex } from "./Layout";
+import { recommendColor } from "./Components/Recommendation/Recommendation";
+import { getLayoutInfo, getStyleInfo, getLayoutIndex } from "./Layout";
 
 class Store {
 
@@ -77,6 +78,17 @@ class Store {
         for (let i = 0; i < results.words.length; i++) {
             info.push(getStyleInfo(results.colorList[i], results.words[i]));
         }
+
+
+        let temp = [];
+        for (const element of info) {
+            let recommend = recommendColor(element.key);
+            temp.push(getStyleInfo("#" + recommend[0], "Recommendation"));
+            temp.push(getStyleInfo("#" + recommend[recommend.length - 1], "Recommendation"));
+        }
+
+        info.push(...temp);
+
         this.recommendStyle = info;
     }
 

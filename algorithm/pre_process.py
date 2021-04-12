@@ -10,13 +10,17 @@ def pre_process(data: str) -> str:
 
     no_punctuation = " ".join(no_punctuation)
 
-    stopWords = set(stopwords.words('english'))
+    stop_words = stopwords.words('english')
+
+    ns = pd.read_csv(
+        './algorithm/new_stopwords.txt')["new_stopwords"].to_list()
+    stop_words = set(stop_words + ns)
 
     words = word_tokenize(no_punctuation)
     wordsFiltered = []
 
     for w in words:
-        if w not in stopWords and w not in wordsFiltered:
+        if w.lower() not in stop_words and w not in stop_words and w not in wordsFiltered:
             wordsFiltered.append(w)
 
     return wordsFiltered
@@ -36,4 +40,4 @@ def clean_csv(file_path, new_file):
 
 
 if __name__ == "__main__":
-    clean_csv("./algorithm/ral_standard.csv", "./algorithm/af_standard.csv")
+    print(pre_process("I wanna a ballon"))
