@@ -12,8 +12,6 @@ class Store {
     @observable activeStep = 0;
     @observable steps = ['Application scenario', 'Styles', 'Recommendation', 'Modification'];
 
-    @observable targetLayout = Layout.PEER_TO_PEER_GRIDS;
-
     @observable isAnalysizing = false;
 
     /**
@@ -123,13 +121,36 @@ class Store {
     }
 
     @action
-    resetActiveStep() {
-        this.activeStep = 0;
+    showResult() {
+        this.state = 1;
     }
 
     @action
-    showResult() {
-        this.state = 1;
+    allRestart() {
+        this.state = 0;
+        this.activeStep = 0;
+        this.chosenLayout = null;
+        this.chosenPrimaryColor = null;
+        this.chosenSecondaryColor = null;
+        this.functionalRequirements = null;
+        this.recommendLayout = null;
+        this.recommendStyle = null;
+        this.styleRequiremnets = null;
+    }
+
+    @action
+    setChosenLayout(layoutIndex) {
+        this.chosenLayout = layoutIndex;
+    }
+
+    @action
+    setPrimaryColor(color) {
+        this.chosenPrimaryColor = color;
+    }
+
+    @action
+    setSecondaryColor(color) {
+        this.chosenSecondaryColor = color;
     }
 }
 

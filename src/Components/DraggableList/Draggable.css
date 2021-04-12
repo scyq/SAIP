@@ -1,0 +1,6 @@
+.DraggableList {
+    z-index: 9;
+    position: fixed !important;
+    right: 100px;
+    bottom: 100px;
+}

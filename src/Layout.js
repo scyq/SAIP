@@ -53,6 +53,10 @@ export function getStyleInfo(hex, originWord) {
     return new Info(hex, originWord);
 }
 
+export function getLayoutName(layoutIndex) {
+    return Object.keys(Layout).find(key => Layout[key] === layoutIndex);
+}
+
 /**
  * @param {number} layout index of layout
  * @return {Array} the react-grids-layout information

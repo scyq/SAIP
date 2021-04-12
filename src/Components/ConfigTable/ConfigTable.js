@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 import { Divider } from '@material-ui/core';
 import "./ConfigTable.css";
 import { inject, observer } from 'mobx-react';
+import { getLayoutName } from '../../Layout';
 
 
 @inject("store")
@@ -27,8 +28,9 @@ class ConfigTable extends React.Component {
                         </ListItemIcon>
                         <ListItemText primary={'Layout'}>
                         </ListItemText>
-                        <ListItemText primary={store.chosenLayout}>
-                        </ListItemText>
+                        <Box>
+                            {getLayoutName(store.chosenLayout)}
+                        </Box>
                     </ListItem>
 
                     <Divider></Divider>
