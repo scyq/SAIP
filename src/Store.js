@@ -1,5 +1,5 @@
 import { action, makeObservable, observable } from "mobx";
-import Layout from "./Layout";
+import Layout, { getLayoutIndex } from "./Layout";
 
 class Store {
 
@@ -27,6 +27,9 @@ class Store {
     @observable recommendLayout = null;
     @observable recommendStyle = null;
 
+    @observable originLayoutWords = null;
+    @observable originStyleWords = null;
+
     @action
     changeFunctionalRequirement(requirement) {
         this.functionalRequirements = requirement;
@@ -34,7 +37,7 @@ class Store {
 
     @action
     changeStyleRequirement(requirement) {
-        this.functionalRequirements = requirement;
+        this.styleRequiremnets = requirement;
     }
 
     @action
@@ -44,13 +47,37 @@ class Store {
     }
 
     @action
+    changeRecommendLayout(result) {
+        // unique
+        let layout = Array.from(new Set(result.layouts));
+        this.recommendLayout = layout.map(ele => {
+            return getLayoutIndex(ele);
+        });
+        this.originLayoutWords = result.words;
+    }
+
+    @action
+    changeRecommendStyle(results) {
+        this.recommendStyle = results.colorList;
+        this.originStyleWords = results.words;
+    }
+
+    @action
     handleRequirements() {
         switch (this.activeStep) {
             case 0:
                 fetch(this.host + "/function_analysis?data=" + this.functionalRequirements)
                     .then(res => res.json())
                     .then((result) => {
-                        console.log(result);
+                        this.changeRecommendLayout(result);
+                        this.handleRequirementsDone();
+                    });
+                break;
+            case 1:
+                fetch(this.host + "/style_analysis?data=" + this.styleRequiremnets)
+                    .then(res => res.json())
+                    .then((result) => {
+                        this.changeRecommendStyle(result);
                         this.handleRequirementsDone();
                     });
                 break;

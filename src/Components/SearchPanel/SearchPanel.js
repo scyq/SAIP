@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField'
 import saip from '../../assets/saip_row.png';
 import arrow from '../../assets/arrow.png';
 import "./SearchPanel.css";
+import Recommendation from '../Recommendation/Recommendation';
 
 
 @inject('store')
@@ -20,21 +21,19 @@ class SearchPanel extends React.Component {
                             alt="SAIP"
                         >
                         </img>
-                        <form noValidate className="form">
-                            <TextField
-                                value={store.functionalRequirements}
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="funcInput"
-                                label='试试输入 "我想要一个记录生活的个人博客"'
-                                name="funcInput"
-                                autoComplete="funcInput"
-                                autoFocus
-                                onChange={event => { store.changeFunctionalRequirement(event.target.value) }}
-                            />
-                        </form>
+                        <TextField
+                            className="form"
+                            value={store.functionalRequirements}
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            id="funcInput"
+                            label='试试输入 "我想要一个记录生活的个人博客"'
+                            name="funcInput"
+                            autoComplete="funcInput"
+                            autoFocus
+                            onChange={event => { store.changeFunctionalRequirement(event.target.value) }}
+                        />
                         <span>
                             <img
                                 src={arrow}
@@ -56,21 +55,19 @@ class SearchPanel extends React.Component {
                             alt="SAIP"
                         >
                         </img>
-                        <form noValidate className="form">
-                            <TextField
-                                value={store.styleRequiremnets}
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="colorInput"
-                                label='试试输入 "我喜欢活泼生动的画风"'
-                                name="colorInput"
-                                autoComplete="colorInput"
-                                autoFocus
-                                onChange={event => { store.changeStyleRequirement(event.target.value) }}
-                            />
-                        </form>
+                        <TextField
+                            className="form"
+                            value={store.styleRequiremnets}
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            id="colorInput"
+                            label='试试输入 "我喜欢活泼生动的画风"'
+                            name="colorInput"
+                            autoComplete="colorInput"
+                            autoFocus
+                            onChange={event => { store.changeStyleRequirement(event.target.value) }}
+                        />
                         <span>
                             <img
                                 src={arrow}
@@ -87,7 +84,7 @@ class SearchPanel extends React.Component {
                     </div>
                 );
             case 2:
-                return <div></div>;
+                return <Recommendation></Recommendation>;
             default:
                 return <div></div>;
         }

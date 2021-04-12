@@ -9,8 +9,8 @@ def train():
 
 def classification(data):
     model = fasttext.load_model("./algorithm/classification.bin")
-    output = model.predict(data, k=3)
-    print(output)
+    output = model.predict(data)
+    return output
 
 
 if __name__ == "__main__":

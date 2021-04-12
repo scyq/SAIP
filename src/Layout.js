@@ -4,9 +4,29 @@ import Sidebar from "./Composition/Sidebar/Sidebar";
 import Breadcrumb from "./Composition/Breadcrumb/Breadcrumb";
 import MiniFooter from "./Composition/MiniFooter/MiniFooter";
 
+import imgHolyGrail from "./assets/layouts/holy_grail.png";
+import imgSandwich from "./assets/layouts/sandwich.png";
+import imgBannerSidebarLeft from "./assets/layouts/banner_sidebar_left.png";
+import imgBannerSidebarRight from "./assets/layouts/banner_sidebar_right.png";
+import imgBanner from "./assets/layouts/banner.png";
+import imgSidebarLeft from "./assets/layouts/sidebar_left.png";
+import imgSidebarRight from "./assets/layouts/sidebar_right.png";
+import imgTopBottom from "./assets/layouts/top_bottom.png";
+import imgBannerTwoColumn from "./assets/layouts/banner_two_column.png"
+import imgPoster from "./assets/layouts/poster.png";
+import imgGrids from "./assets/layouts/grids.png";
+import imgP2PGrids from "./assets/layouts/peer_to_peer_grids.png";
+
+class Info {
+    constructor(key, originWord) {
+        this.key = key;
+        this.origin = originWord;
+    }
+}
+
 const Layout = {
     HOLY_GRAIL: 0,
-    SANDWITCH: 1,
+    SANDWICH: 1,
     BANNER_SIDEBAR_LEFT: 2,
     BANNER_SIDEBAR_RIGHT: 3,
     BANNER: 4,
@@ -33,7 +53,7 @@ export function layoutParser(layout) {
                 { i: "rightSidebar", x: 10, y: 7, w: 2, h: 70 },
                 { i: "footer", x: 0, y: 77, h: 8, w: 12 },
             ];
-        case Layout.SANDWITCH:
+        case Layout.SANDWICH:
             return [
                 { i: "header", x: 0, y: 0, h: 7, w: 12 },
                 { i: "mainContent", x: 3, y: 7, w: 12, h: 70 },
@@ -106,6 +126,69 @@ export function layoutParser(layout) {
             throw new Error("No such a layout");
     }
 }
+
+export function getLayoutIndex(str) {
+    switch (str) {
+        case "holy-grail":
+            return Layout.HOLY_GRAIL;
+        case "sandwich":
+            return Layout.SANDWICH;
+        case "banner-sidebar-left":
+            return Layout.BANNER_SIDEBAR_LEFT;
+        case "banner-sidebar-right":
+            return Layout.BANNER_SIDEBAR_RIGHT;
+        case "banner":
+            return Layout.BANNER;
+        case "sidebar-left":
+            return Layout.SIDEBAR_LEFT;
+        case "sidebar-right":
+            return Layout.SIDEBAR_RIGHT;
+        case "top-bottom":
+            return Layout.TOP_BOTTOM;
+        case "banner-two-column":
+            return Layout.BANNER_TWO_COLUMN;
+        case "poster":
+            return Layout.POSTER;
+        case "grids":
+            return Layout.GRIDS;
+        case "peer-to-peer-grids":
+            return Layout.PEER_TO_PEER_GRIDS;
+        default:
+            throw new Error("Can not match layout.");
+    }
+}
+
+export function getLayoutImage(index) {
+    switch (index) {
+        case Layout.HOLY_GRAIL:
+            return imgHolyGrail;
+        case Layout.SANDWICH:
+            return imgSandwich;
+        case Layout.BANNER_SIDEBAR_LEFT:
+            return imgBannerSidebarLeft;
+        case Layout.BANNER_SIDEBAR_RIGHT:
+            return imgBannerSidebarRight;
+        case Layout.BANNER:
+            return imgBanner;
+        case Layout.BANNER_TWO_COLUMN:
+            return imgBannerTwoColumn;
+        case Layout.SIDEBAR_LEFT:
+            return imgSidebarLeft;
+        case Layout.SIDEBAR_RIGHT:
+            return imgSidebarRight;
+        case Layout.TOP_BOTTOM:
+            return imgTopBottom;
+        case Layout.POSTER:
+            return imgPoster;
+        case Layout.GRIDS:
+            return imgGrids;
+        case Layout.PEER_TO_PEER_GRIDS:
+            return imgP2PGrids;
+        default:
+            throw new Error("No related img");
+    }
+}
+
 
 /**
  * @param {string} component component key

@@ -37,12 +37,11 @@ model.add(LSTM(128))
 model.add(Dense(128, activation='relu'))
 model.add(Dense(3, activation='sigmoid'))
 model.compile(optimizer='adam', loss='mse', metrics=['acc'])
-model.summary()
+# model.summary()
+
 
 # The RGB values are between 0 - 255
 # scale them to be between 0 - 1
-
-
 def norm(value):
     return value / 255.0
 
