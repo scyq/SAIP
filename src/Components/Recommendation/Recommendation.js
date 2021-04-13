@@ -32,15 +32,30 @@ function hex2Hue(hex) {
 
 export function recommendColor(hex) {
     //recommend color
+    let res = [];
     let recommender = new ColorScheme();
-    recommender.from_hue(hex2Hue(hex))
-        .scheme('triade')
-        .distance(0.1)
+    let hue = hex2Hue(hex);
+    recommender.from_hue(hue)
+        .scheme('tetrade')
         .add_complement(false)
-        .variation('pastel')
+        .variation('light')
         .web_safe(true);
+
     let colors = recommender.colors();
-    return colors;
+
+    res.push(colors[0]);
+
+    recommender.from_hue(hue)
+        .scheme('contrast')
+        .add_complement(false)
+        .variation('default')
+        .web_safe(true);
+
+    colors = recommender.colors();
+
+    res.push(colors[0]);
+
+    return res;
 }
 
 @inject('store')
@@ -102,7 +117,7 @@ class Recommendation extends React.Component {
         });
 
         return (
-            <div className="root" >
+            <div className="recommendation" >
 
                 <div className="column">
                     {layoutImgs}

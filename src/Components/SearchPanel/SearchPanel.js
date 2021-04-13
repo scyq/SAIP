@@ -30,7 +30,7 @@ class SearchPanel extends React.Component {
                             margin="normal"
                             required
                             id="funcInput"
-                            label='试试输入 "我想要一个记录生活的个人博客"'
+                            label='Try "for news and newspaper"'
                             name="funcInput"
                             autoComplete="funcInput"
                             autoFocus
@@ -66,7 +66,7 @@ class SearchPanel extends React.Component {
                             margin="normal"
                             required
                             id="colorInput"
-                            label='试试输入 "我喜欢活泼生动的画风"'
+                            label='Try "lovely and cute style"'
                             name="colorInput"
                             autoComplete="colorInput"
                             autoFocus

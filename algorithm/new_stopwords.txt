@@ -615,6 +615,7 @@ significantly
 similar
 similarly
 since
+site
 six
 slightly
 small
@@ -641,6 +642,8 @@ state
 states
 still
 stop
+style
+styles
 sub
 substantially
 successfully
@@ -783,6 +786,8 @@ we'd
 we'll
 we're
 we've
+web
+website
 wed
 welcome
 well

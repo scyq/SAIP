@@ -16,6 +16,7 @@ import imgBannerTwoColumn from "./assets/layouts/banner_two_column.png"
 import imgPoster from "./assets/layouts/poster.png";
 import imgGrids from "./assets/layouts/grids.png";
 import imgP2PGrids from "./assets/layouts/peer_to_peer_grids.png";
+import Blog from "./Composition/Blog/Blog";
 
 class Info {
     constructor(key, originWord, layoutIndex) {
@@ -226,6 +227,8 @@ function getRelatedComponent(component) {
             return <Breadcrumb></Breadcrumb>;
         case "miniFooter":
             return <MiniFooter></MiniFooter>;
+        case "bannerMainContent":
+            return <Blog></Blog>
 
         default:
             return component;
@@ -241,7 +244,7 @@ export function generateDOM(layoutConfig) {
     let renderList = [];
     for (const config of layoutConfig) {
         renderList.push(
-            <div key={config.i} style={{ borderStyle: "solid" }}> {getRelatedComponent(config.i)}</div >
+            <div key={config.i}> {getRelatedComponent(config.i)}</div >
         )
     }
     return renderList;

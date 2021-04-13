@@ -14,6 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { inject, observer } from 'mobx-react';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -79,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Header() {
+function LocalHeader(props) {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -133,7 +134,7 @@ export default function Header() {
         >
             <MenuItem>
                 <IconButton aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="secondary">
+                    <Badge badgeContent={4} style={{ backgroundColor: props.secondaryColor }}>
                         <MailIcon />
                     </Badge>
                 </IconButton>
@@ -141,7 +142,7 @@ export default function Header() {
             </MenuItem>
             <MenuItem>
                 <IconButton aria-label="show 11 new notifications" color="inherit">
-                    <Badge badgeContent={11} color="secondary">
+                    <Badge badgeContent={11} style={{ backgroundColor: props.secondaryColor }}>
                         <NotificationsIcon />
                     </Badge>
                 </IconButton>
@@ -163,7 +164,7 @@ export default function Header() {
 
     return (
         <div className={classes.grow}>
-            <AppBar position="static">
+            <AppBar position="static" style={{ background: props.primaryColor }}>
                 <Toolbar>
                     <IconButton
                         edge="start"
@@ -192,12 +193,12 @@ export default function Header() {
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         <IconButton aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="secondary">
+                            <Badge badgeContent={4} style={{ color: props.secondaryColor }}>
                                 <MailIcon />
                             </Badge>
                         </IconButton>
                         <IconButton aria-label="show 17 new notifications" color="inherit">
-                            <Badge badgeContent={17} color="secondary">
+                            <Badge badgeContent={17} style={{ color: props.secondaryColor }}>
                                 <NotificationsIcon />
                             </Badge>
                         </IconButton>
@@ -230,3 +231,15 @@ export default function Header() {
         </div>
     );
 }
+
+@inject("store")
+@observer
+class Header extends React.Component {
+    render() {
+        const { store } = this.props;
+        return <LocalHeader primaryColor={store.chosenPrimaryColor} secondaryColor={store.chosenSecondaryColor}></LocalHeader>
+    }
+}
+
+
+export default Header;

@@ -33,6 +33,7 @@ class DraggableList extends React.Component {
             document.getElementById("exportCanvas").toBlob(function (blob) {
                 saveAs(blob, "prototype.png");
             });
+            document.getElementById("exportCanvas").style.display = "none";
         });
     }
 

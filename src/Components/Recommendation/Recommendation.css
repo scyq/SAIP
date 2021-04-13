@@ -1,7 +1,9 @@
-.root {
+.recommendation {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
+    flex: 1;
+    width: 100%;
 }
 
 .column {
@@ -10,7 +12,9 @@
     margin: 30px 30px 30px 200px;
     width: 100%;
     align-items: flex-start;
-
+    height: 60%;
+    overflow-y: auto !important;
+    overflow-x: visible !important;
 }
 
 .layoutImg {
